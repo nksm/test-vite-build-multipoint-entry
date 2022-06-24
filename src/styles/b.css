@@ -1,0 +1,6 @@
+@import './_common';
+
+button {
+  color: var(--black);
+  background-color: #ccc;
+}

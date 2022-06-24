@@ -1,0 +1,5 @@
+@import './_common';
+
+a {
+  background-color: var(--black);
+}
