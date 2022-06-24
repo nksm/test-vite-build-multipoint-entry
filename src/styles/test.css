@@ -1,0 +1,6 @@
+@import './_common';
+
+p {
+  color: var(--black);
+  background-color: #ccc;
+}
