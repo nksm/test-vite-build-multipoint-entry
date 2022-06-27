@@ -10,15 +10,13 @@ export default defineConfig({
   root,
   build: {
     outDir,
+    manifest: true,
     rollupOptions: {
-      input: {
-        'a': resolve(root, 'styles', 'a.css'),
-        'b': resolve(root, 'styles', 'b.css'),
-        'index': resolve(root, 'index.html'),
-      },
-      output: {
-        assetFileNames: "[name].[ext]",
-      },
+      input: [
+        resolve(root, 'styles', 'a.css'),
+        resolve(root, 'styles', 'b.css'),
+        resolve(root, 'index.html'),
+      ]
     }
   },
 })
