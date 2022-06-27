@@ -14,6 +14,8 @@ export default defineConfig({
     rollupOptions: {
       input: [
         resolve(root, 'scripts', 'test.ts'),
+        resolve(root, 'scripts', 'style-ab.ts'),
+        resolve(root, 'scripts', 'style-abcd.ts'),
         resolve(root, 'styles', 'a.css'),
         resolve(root, 'styles', 'b.css'),
         resolve(root, 'index.html'),
