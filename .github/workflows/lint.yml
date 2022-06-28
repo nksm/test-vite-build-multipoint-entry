@@ -5,12 +5,24 @@ on:
     types: [opened, synchronize]
 
 jobs:
+  eslint:
+    name: eslint
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: reviewdog eslint
+        uses: reviewdog/action-eslint@v1
+        with:
+          eslint_flags: '**/*.{vue,ts,js}'
+          reporter: github-pr-review
+          fail_on_error: true
+
   stylelint:
     name: stylelint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: stylelint
+      - name: reviewdog stylelint
         uses: reviewdog/action-stylelint@v1
         with:
           reporter: github-pr-review # Change reporter.
