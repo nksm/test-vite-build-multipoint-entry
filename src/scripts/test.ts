@@ -1,5 +1,6 @@
-import $ from 'jquery';
+import $ from 'jquery'
 
-$(function(){
-  console.log('jQuery is ready.');
-});
+$(() => {
+  // eslint-disable-next-line no-console
+  console.log('jQuery is ready.')
+})
