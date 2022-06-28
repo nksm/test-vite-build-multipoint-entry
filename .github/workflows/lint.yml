@@ -15,5 +15,5 @@ jobs:
         with:
           reporter: github-pr-review # Change reporter.
           packages: 'stylelint-prettier'
-          stylelint_input: '**/*.vue'
+          stylelint_input: '**/*.{vue,css}'
           fail_on_error: true
