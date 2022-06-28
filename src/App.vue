@@ -11,19 +11,18 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
   margin-top: 60px;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   color: #2c3e50;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
-  margin-top: 10px;
-  box-sizing: border-box;
   position: absolute;
+  box-sizing: border-box;
   display: block;
+  margin-top: 10px;
 }
-
 </style>
