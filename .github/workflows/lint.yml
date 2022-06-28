@@ -1,0 +1,20 @@
+name: Lint
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  stylelint:
+    name: stylelint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: reviewdog stylelint
+        uses: reviewdog/action-stylelint@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          stylelint_input: '**/*.{vue,css}'
+          packages: 'stylelint-prettier stylelint-order'
+          reporter: github-pr-review
+          fail_on_error: true
