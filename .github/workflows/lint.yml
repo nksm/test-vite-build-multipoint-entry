@@ -25,4 +25,6 @@ jobs:
         env:
           # reviewdogはこの環境変数でTokenを参照する
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npm run lint:style
+        run: |
+            npx stylelint "**/*.{vue,css}" --no-color \
+            | reviewdog -f="stylelint" -name="stylelint" -reporter="github-pr-check" -level="error" -filter-mode="nofilter" -fail-on-error="false"
