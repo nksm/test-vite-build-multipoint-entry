@@ -18,4 +18,12 @@ import HelloWorld from './components/HelloWorld.vue'
   color: #2c3e50;
   margin-top: 60px;
 }
+
+a {
+  margin-top: 10px;
+  box-sizing: border-box;
+  position: absolute;
+  display: block;
+}
+
 </style>
