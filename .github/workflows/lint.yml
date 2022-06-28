@@ -5,7 +5,7 @@ on:
     types: [opened, synchronize]
 
 jobs:
-  stylelint2:
+  stylelint:
     name: stylelint
     runs-on: ubuntu-latest
     steps:
